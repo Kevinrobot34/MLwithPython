@@ -70,7 +70,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> 8 / 5  # division always returns a floating point number
 1.6
 ```
-このように行ごとに処理結果を返してくれます．
+このように行ごとに処理結果を返してくれます．
 これを対話モード (interactive mode) といいます．
 
 終了するには`Ctrl + D`を押すか，以下を入力してください
@@ -79,8 +79,8 @@ Type "help", "copyright", "credits" or "license" for more information.
 $
 ```
 
-### 使い方２
-対話モードのように逐次的に処理をするのではなく，`hoge.py`というようなファイルに
+### 使い方２: pythonスクリプト
+対話モードのように逐次的に処理をするのではなく，`hoge.py`というようなスクリプトファイルに
 処理を書いてまとめて実行することもできます．
 
 例えば好きなエディターで，以下のような`hello.py`を作ってみましょう．
@@ -96,7 +96,11 @@ Hello, World!
 ```
 
 ### 使い方３: jupyter-notebook
-実際に様々な作業をしていると上記二つの使い方の中間くらいの使い方ができると嬉しかったりします．
+実際に様々な作業をしていると上記二つの使い方の中間くらいの使い方ができると嬉しかったりします．
 これを実現してくれるのがjupyter-notebookです．
 
-![jupyter-notebook-sample1](https://github.com/Kevinrobot34/MLwithPython/tree/master/picture/ipynb_sample1.png)
+<img src="https://github.com/Kevinrobot34/MLwithPython/blob/master/picture/ipynb_sample1.png" width="500">
+
+「Mathematicaのようにセルごとに実行していけるもの」と考えてもらうと分かりやすいかもしれません．
+
+次のページでjupyter-notebookのセットアップをしていきましょう．
