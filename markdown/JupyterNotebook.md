@@ -14,7 +14,7 @@
 Jupyter Notebookはブラウザ上で動作するアプリケーションで，
 コードやMarkdownテキスト・図などが共存するドキュメントを簡単に作ることができるツールです．
 
-<img src="https://github.com/Kevinrobot34/MLwithPython/blob/master/picture/ipynb_sample1.png" width="400">
+<img src="/picture/ipynb_sample1.png" width="400">
 
 ## Installation
 まずpipを最新のバージョンにする．
@@ -34,7 +34,7 @@ $ jupyter-notebook
 ```
 と実行すると，コマンドを実行したディレクトリをルートとしてNotebook Dashboardが開く．
 
-<img src="https://github.com/Kevinrobot34/MLwithPython/blob/master/picture/notebook_dashboard.png" width="500">
+<img src="/picture/notebook_dashboard.png" width="500">
 
 ### Creating a Notebook
 GUIを操作すれば簡単に作れる．
@@ -43,6 +43,7 @@ GUIを操作すれば簡単に作れる．
 * 右上の**New**からNotebookの使いたいKernelを選択
 
 でNotebookができる．
+
 
 ### Manipulation in Notebook
 Jupyter Notebookには２つの入力モードがある
@@ -54,6 +55,10 @@ Jupyter Notebookには２つの入力モードがある
     * `Esc`を押すとこのモードになる．
 
 セル内にコードを書き，`Shift + Enter`でそのセル内の処理を実行できる．
+
+実際にNotebookを使いながらPythonの文法について確認しましょう．
+
+[> Next: Python Grammar](../notebook/PythonGrammar.ipynb)
 
 
 ## Kernel周り

@@ -20,8 +20,8 @@ Pythonで一通り機械学習などを出来るようになるためのnotebook
 ## Contents
 * 環境構築
     - [pythonの準備](markdown/DevEnv.md)
-        - pyenvによるpythonのインストール
-    - Jupyter Notebook
-* pythonの文法overview
+        - [pyenvによるpythonのインストール](markdown/pyenv.md)
+    - [Jupyter Notebookの設定](markdown/JupyterNotebook.md)
+* [pythonの文法overview](notebook/PythonGrammar.ipynb)
 * sklearnによる機械学習
 * chainerによる深層学習
