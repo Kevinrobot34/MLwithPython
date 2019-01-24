@@ -99,6 +99,9 @@ Hello, World!
 実際に様々な作業をしていると上記二つの使い方の中間くらいの使い方ができると嬉しかったりします．
 これを実現してくれるのがjupyter-notebookです．
 
+[JupyterNotebookSample](picture/ipynb_sample1.png)
+
+
 <img src="https://github.com/Kevinrobot34/MLwithPython/blob/master/picture/ipynb_sample1.png" width="500">
 
 「Mathematicaのようにセルごとに実行していけるもの」と考えてもらうと分かりやすいかもしれません．
