@@ -3,63 +3,85 @@ pyenvを用いてpythonの開発環境を構築する．
 
 ## Installation & Setting for MacOS Users
 1. pyenvのインストール
-    <pre>
+    ```
     $ brew update
-    $ brew install pyenv </pre>
+    $ brew install pyenv
+    ```
 
 2. pyenvの機能や自動補完を使えるように`~/.bash_profile`を編集する
-    <pre>
-    $ echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.bash_profile </pre>
+    ```
+    $ echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.bash_profile
+    ```
 
 3. ターミナルを再起動する
 
 4. [pyenv wiki](https://github.com/pyenv/pyenv/wiki)を読んで必要そうなものをインストールする
-    <pre>
+    ```
     $ xcode-select --install
     $ brew install openssl readline sqlite3 xz zlib
-    </pre>
+    ```
     Mojave以降のOSを使っている場合は以下も必要．
-    <pre>
+    ```
     $ sudo installer -pkg /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg -target /
-    </pre>
+    ```
 
 5. 好きなpythonをインストールする(今回は3.6.7)
-   <pre>$ pyenv install 3.6.7</pre>
+   ```
+   $ pyenv install 3.6.7
+   ```
 
 6. インストールしたバージョンを実際に設定する
-   <pre>$ pyenv global 3.6.7</pre>
+   ```
+   $ pyenv global 3.6.7
+   ```
 
 
 ## Commands
 基本的には [pyenv-Github-Commands](https://github.com/pyenv/pyenv/blob/master/COMMANDS.md) を見れば解決するはず．
 * `$(pyenv root)`の確認
-    <pre> $ pyenv root</pre>
+    ```
+    $ pyenv root
+    ```
     * defaultでは`~/.pyenv/`
 
 * pyenvで利用可能なpythonのバージョンを列挙
-    <pre>$ pyenv install --list</pre>
+    ```
+    $ pyenv install --list
+    ```
     * or <code>$ pyenv install --list | grep 3.6</code> and so on.
 
 *  特定のバージョンのpythonをpyenvで使えるようにインストールする
-   <pre>$ pyenv install 3.6.7</pre>
+   ```
+   $ pyenv install 3.6.7
+   ```
     * `$(pyenv root)/versions/3.6.7/`にpython3.6.7が入る．
 
 * pyenvにインストールされているバージョンを確認する
-  <pre>$ pyenv versions
+  ```
+  $ pyenv versions
   system
-  * 3.6.7 (set by /Users/hoge/.pyenv/version)</pre>
+  * 3.6.7 (set by /Users/hoge/.pyenv/version)
+  ```
     * 現在アクティブになっているバージョンの横に*がつく
 
 * `python`や`python3`などのコマンドのフルパスを表示する
-  <pre>$ pyenv which python3.6
-  /Users/hoge/.pyenv/versions/3.6.7/bin/python3.6</pre>
+  ```
+  $ pyenv which python3.6
+  /Users/hoge/.pyenv/versions/3.6.7/bin/python3.6
+  ```
     * `$which python3.6`だと，`/Users/hoge/.pyenv/shims/python3.6`などとなってしまう．
 
-* グローバルなpythonのバージョンの設定をする．<pre>$ pyenv global 3.6.7</pre>
+* グローバルなpythonのバージョンの設定をする．
+  ```
+  $ pyenv global 3.6.7
+  ```
     * `$(pyenv root)/version`にバージョン名を書き込んでいる．
     * `$ pyenv global {version name}`は実はかなり賢い！詳細は[ここ](https://github.com/pyenv/pyenv/blob/master/COMMANDS.md#pyenv-global)
 
-* ローカルなpythonのバージョンを設定する(あるディレクトリ以下のpythonのバージョンを指定する)．<pre>$ pyenv local 3.6.7</pre>
+* ローカルなpythonのバージョンを設定する(あるディレクトリ以下のpythonのバージョンを指定する)．
+  ```
+  $ pyenv local 3.6.7
+  ```
 
 ## How pyenv works
 ### directory structure
@@ -123,5 +145,6 @@ shimの中の`python`といった実行ファイルが実行されると，pyenv
     * 便利なコマンド一覧．具体的な使い方を知りたいときはこれを見るのが一番．
 * [How to manage multiple Python versions and virtual environments](https://medium.freecodecamp.org/manage-multiple-python-versions-and-virtual-environments-venv-pyenv-pyvenv-a29fb00c296f)
     * pythonのバージョン管理や仮想環境についてまとめてくれてるブログ
+
 
 [Topへ戻る](../README.md)

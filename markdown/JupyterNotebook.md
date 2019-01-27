@@ -33,7 +33,7 @@ GUIを操作すれば簡単に作れます．
 * 右上の**New**からNotebookの使いたいKernelを選択
 
 でNotebookができます．
-$ \alpha $
+
 
 ### Manipulation in Notebook
 Jupyter Notebookには２つの入力モードがあります．
