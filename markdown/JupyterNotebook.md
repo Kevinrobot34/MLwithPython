@@ -1,5 +1,6 @@
-# Jupyter Notebook の設定
+[Top](https://github.com/Kevinrobot34/MLwithPython) > [markdown](https://github.com/Kevinrobot34/MLwithPython/tree/master/markdown) > **DevEnv.md**
 
+# Jupyter Notebook の設定
 
 ## Introduction
 Jupyter Notebookはブラウザ上で動作するアプリケーションで，
@@ -34,7 +35,7 @@ GUIを操作すれば簡単に作れます．
 * 右上の**New**からNotebookの使いたいKernelを選択
 
 でNotebookができます．
-
+$ \alpha $
 
 ### Manipulation in Notebook
 Jupyter Notebookには２つの入力モードがあります．
@@ -48,11 +49,11 @@ Jupyter Notebookには２つの入力モードがあります．
 
 基本的な使い方を以下に列挙しておきます．
 * セル内のコードの実行
-    - `Shift + Enter` in Edit Mode or 上部リボンのRunボタン
+    - `Shift + Enter` in Edit Mode or 上部リボンのRunボタン
 * セルの追加
     - `A`, `B` in Command Mode or 上部リボンのプラスボタン
 * セルの削除
-    - `D`+`D` in Command Mode or 上部リボンのハサミボタン
+    - `D`+`D` in Command Mode or 上部リボンのハサミボタン
 
 <img src="/picture/ipynb_sample2.png" width="500">
 
@@ -60,7 +61,7 @@ Jupyter Notebookには２つの入力モードがあります．
 
 [> Next: Python Grammar](../notebook/PythonGrammar.ipynb)
 
-[Topへ戻る](../README.md)
+[Topへ戻る](https://github.com/Kevinrobot34/MLwithPython)
 
 
 ## Reference
@@ -77,23 +78,23 @@ Jupyter Notebookには２つの入力モードがあります．
 
 ## Kernel周り
 ### Kernelの確認
-<pre>
+```
 $ jupyter kernelspec list
-</pre>
+```
 出力は
-<pre>
+```
 Available kernels:
   python3       /Users/hoge/Library/Jupyter/kernels/python3
   tensorflow    /Users/hoge/Library/Jupyter/kernels/tensorflow
-</pre>
+```
 的な感じ．ここで表示されるパスの中の`kernel.json`というファイルを見ると，どこのpythonを使っているかやdisplay-nameなどの情報が書かれている．
 
 ### Kernelの追加
 Kernelとして追加したいPython環境をActivateさせた状態で，
-<pre>
+```
 $ python -m pip install ipykernel
 $ python -m ipykernel install --user --name other-env --display-name "Python (other-env)"
-</pre>
+```
 とする．`other-env`や`Python (other-env)`のところは好きに決めてOK．
 * display-name : jupyter-notebookやHydrogenのKernel選択で出てくる名前
 * name : `jupyter kernelspec list`をした時に出てくる名前，Kernelの削除とかするときに指定する名前
@@ -101,30 +102,30 @@ $ python -m ipykernel install --user --name other-env --display-name "Python (ot
 #### 注意
 以上の設定で追加されるKernelのバージョンはここで使った`python`に当然依存する．
 追加する前に，
-<pre>
+```
 $ python -V
-</pre>
+```
 でバージョンを確認したり，
-<pre>
+```
 $ which python
-</pre>
+```
 でどこにあるpythonなのか確認したりしよう．
 必要に応じて`python`を`python3`に置き換えたりして適宜実行してください．
 
 ### Kernelの削除
-<pre>
+```
 $ jupiter kernelspec uninstall [kernelname]
-</pre>
+```
 
 
 ## Jupyter-Notebookの環境設定
 ### Fontの設定
 NotebookのcodeのFontは好きなように指定できる．
 `~/.jupyter/custom/custom.css`を編集し以下などのようにしておけば良い．
-<pre>
+```
 .CodeMirror pre, .output pre {
   font-family: Menlo, Consolas, "DejaVu Sans Mono", monospace;
   font-size: 10pt;
 }
-</pre>
+```
 * Atomと同じものを指定しておくのが無難かなぁ
