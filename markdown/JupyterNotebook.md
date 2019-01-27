@@ -1,15 +1,6 @@
 # Jupyter Notebook の設定
 
 
-## Reference
-* https://jupyter.readthedocs.io/en/latest/index.html
-    * 公式ドキュメント
-* http://jupyter.org/install
-    * Jupyterのinstallに関して
-* https://ipython.readthedocs.io/en/latest/install/kernel_install.html
-    * kernelの追加に関して
-
-
 ## Introduction
 Jupyter Notebookはブラウザ上で動作するアプリケーションで，
 コードやMarkdownテキスト・図などが共存するドキュメントを簡単に作ることができるツールです．
@@ -17,11 +8,11 @@ Jupyter Notebookはブラウザ上で動作するアプリケーションで，
 <img src="/picture/ipynb_sample1.png" width="400">
 
 ## Installation
-まずpipを最新のバージョンにする．
+まずpipを最新のバージョンにします．
 ```
 $ pip3 install --upgrade pip
 ```
-そしてjupyterをインストールする．
+そしてjupyterをインストールしましょう．
 ```
 $ pip3 install jupyter
 ```
@@ -32,33 +23,56 @@ $ pip3 install jupyter
 ```
 $ jupyter-notebook
 ```
-と実行すると，コマンドを実行したディレクトリをルートとしてNotebook Dashboardが開く．
+と実行すると，コマンドを実行したディレクトリをルートとしてNotebook Dashboardが開きます．
 
 <img src="/picture/notebook_dashboard.png" width="500">
 
 ### Creating a Notebook
-GUIを操作すれば簡単に作れる．
+GUIを操作すれば簡単に作れます．
 
 * GUIを操作し適当なディレクトリに移動
 * 右上の**New**からNotebookの使いたいKernelを選択
 
-でNotebookができる．
+でNotebookができます．
 
 
 ### Manipulation in Notebook
-Jupyter Notebookには２つの入力モードがある
+Jupyter Notebookには２つの入力モードがあります．
 * **Edit Mode**
-    * 実際にセル内のコードやテキストを編集するモード．セルの枠が緑色になる．
+    * 実際にセル内のコードやテキストを編集するモード．セルの枠が **緑色** になる．
     * `Enter`を押すとこのモードになる．
 * **Command Mode**:
-    * セル間の移動やセルの挿入・削除といったセル単位の操作をするモード．セルの枠が青色になる．
+    * セル間の移動やセルの挿入・削除といったセル単位の操作をするモード．セルの枠が **青色** になる．
     * `Esc`を押すとこのモードになる．
 
-セル内にコードを書き，`Shift + Enter`でそのセル内の処理を実行できる．
 
-実際にNotebookを使いながらPythonの文法について確認しましょう．
+基本的な使い方を以下に列挙しておきます．
+* セル内のコードの実行
+    - `Shift + Enter` in Edit Mode or 上部リボンのRunボタン
+* セルの追加
+    - `A`, `B` in Command Mode or 上部リボンのプラスボタン
+* セルの削除
+    - `D`+`D` in Command Mode or 上部リボンのハサミボタン
+
+<img src="/picture/ipynb_sample2.png" width="500">
+
+続いて，実際にNotebookを使いながらPythonの文法について確認しましょう．
 
 [> Next: Python Grammar](../notebook/PythonGrammar.ipynb)
+
+[Topへ戻る](../README.md)
+
+
+## Reference
+* https://jupyter.readthedocs.io/en/latest/index.html
+    * 公式ドキュメント
+* http://jupyter.org/install
+    * Jupyterのinstallに関して
+* https://ipython.readthedocs.io/en/latest/install/kernel_install.html
+    * kernelの追加に関して
+
+
+
 
 
 ## Kernel周り
