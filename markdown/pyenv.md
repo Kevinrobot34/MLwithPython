@@ -76,7 +76,8 @@ pyenvを用いてpythonの開発環境を構築する．
   $ pyenv global 3.6.7
   ```
     * `$(pyenv root)/version`にバージョン名を書き込んでいる．
-    * `$ pyenv global {version name}`は実はかなり賢い！詳細は[ここ](https://github.com/pyenv/pyenv/blob/master/COMMANDS.md#pyenv-global)
+    * `$ pyenv global {version name}`は実はかなり賢い！
+    詳細は[ここ](https://github.com/pyenv/pyenv/blob/master/COMMANDS.md#pyenv-global)
 
 * ローカルなpythonのバージョンを設定する(あるディレクトリ以下のpythonのバージョンを指定する)．
   ```
@@ -111,18 +112,21 @@ $(pyenv root)
     * `$ pyenv install {version_name}`でインストールされたpythonたちが入ってるディレクトリ．
 
 ### Understanding shims
-プログラムのバージョンや環境間の差異を埋める緩衝材のような役割をするライブラリーのことを **shims(=詰め木)** と呼んだりする．
+プログラムのバージョンや環境間の差異を埋める緩衝材のような役割をするライブラリーのことを **shim(=詰め木)** と呼んだりする．
 まさにpyenvのことやん．
 
 * https://en.wikipedia.org/wiki/Shim_(computing)
 
-pyenvは`$(pyenv root)/shims/`内に以下の **Choosing the Python Version** に従って特定のバージョンのパスを渡すような各種実行ファイル(`pip`, `python`, `python3` etc.)を置いている．
-この`$(pyenv root)/shims`を`$PATH`の最上位に追加することで，shimとしての役割を実現している．具体的には，例えば`pip`をコマンドラインで実行すると，
+pyenvは`$(pyenv root)/shims/`内に以下の **Choosing the Python Version** に従って
+特定のバージョンのパスを渡すような各種実行ファイル(`pip`, `python`, `python3`, etc.)を置いている．
+この`$(pyenv root)/shims`を環境変数`$PATH`の最上位に追加することで，shimとしての役割を実現している．
+具体的には，例えば`pip`をコマンドラインで実行すると，
+
 * `$PATH`内の各パスに`pip`がないか探す．
 * `$(pyenv root)/shims/pip`を見つける．
 * `$(pyenv root)/shims/pip`が実行され，**Choosing the Python Version** に従って特定のバージョンの`pip`実行ファイルを探し実行される．
 
-となる．
+と動作して，設定されているpythonのバージョンに対応したpipを実行する．
 
 
 ### Choosing the Python Version
@@ -147,4 +151,5 @@ shimの中の`python`といった実行ファイルが実行されると，pyenv
     * pythonのバージョン管理や仮想環境についてまとめてくれてるブログ
 
 
-[Topへ戻る](../README.md)
+---
+[Topへ戻る](https://github.com/Kevinrobot34/MLwithPython)

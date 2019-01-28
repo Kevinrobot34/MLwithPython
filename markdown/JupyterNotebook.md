@@ -72,9 +72,27 @@ Jupyter Notebookには２つの入力モードがあります．
 
 
 
+---
 
+## Commands
+### Config Directoryの確認
+```
+$ jupyter --path
+config:
+    /Users/hoge/.jupyter
+    /Users/hoge/python-venv/def/etc/jupyter
+    /usr/local/etc/jupyter
+    /etc/jupyter
+data:
+    /Users/hoge/Library/Jupyter
+    /Users/hoge/python-venv/def/share/jupyter
+    /usr/local/share/jupyter
+    /usr/share/jupyter
+runtime:
+    /Users/hoge/Library/Jupyter/runtime
+```
+* https://jupyter.readthedocs.io/en/latest/projects/jupyter-directories.html
 
-## Kernel周り
 ### Kernelの確認
 ```
 $ jupyter kernelspec list
@@ -85,7 +103,8 @@ Available kernels:
   python3       /Users/hoge/Library/Jupyter/kernels/python3
   tensorflow    /Users/hoge/Library/Jupyter/kernels/tensorflow
 ```
-的な感じ．ここで表示されるパスの中の`kernel.json`というファイルを見ると，どこのpythonを使っているかやdisplay-nameなどの情報が書かれている．
+的な感じ．ここで表示されるパスの中の`kernel.json`というファイルを見ると，
+どこのpythonを使っているかやdisplay-nameなどの情報が書かれている．
 
 ### Kernelの追加
 Kernelとして追加したいPython環境をActivateさせた状態で，
@@ -112,11 +131,11 @@ $ which python
 
 ### Kernelの削除
 ```
-$ jupiter kernelspec uninstall [kernelname]
+$ jupiter kernelspec uninstall {kernelname}
 ```
 
 
-## Jupyter-Notebookの環境設定
+## Configurations
 ### Fontの設定
 NotebookのcodeのFontは好きなように指定できる．
 `~/.jupyter/custom/custom.css`を編集し以下などのようにしておけば良い．
@@ -127,3 +146,6 @@ NotebookのcodeのFontは好きなように指定できる．
 }
 ```
 * Atomと同じものを指定しておくのが無難かなぁ
+
+---
+[Topへ戻る](https://github.com/Kevinrobot34/MLwithPython)
