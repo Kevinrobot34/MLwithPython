@@ -23,5 +23,7 @@ Pythonで一通り機械学習などを出来るようになるためのnotebook
         - [pyenvによるpythonのインストール](markdown/pyenv.md)
     - [Jupyter Notebookの設定](markdown/JupyterNotebook.md)
 * [pythonの文法overview](notebook/PythonGrammar.ipynb)
-* [scikit-learnによる機械学習](notebook/sklearn.ipynb)
-* chainerによる深層学習
+* [pandasによるデータ処理](notebook/pandas.ipynb) (under construction)
+* matplotlibによる可視化 (under construction)
+* [scikit-learnによる機械学習](notebook/sklearn.ipynb) (under construction)
+* [chainerによる深層学習](notebook/chainer_MNIST.ipynb)

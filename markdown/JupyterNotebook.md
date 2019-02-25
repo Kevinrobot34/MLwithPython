@@ -116,6 +116,8 @@ $ python -m ipykernel install --user --name other-env --display-name "Python (ot
 * display-name : jupyter-notebookやHydrogenのKernel選択で出てくる名前
 * name : `jupyter kernelspec list`をした時に出てくる名前，Kernelの削除とかするときに指定する名前
 
+上記のコマンドを実行すると，他の仮想環境からもカーネルとして参照できるようになる．
+
 #### 注意
 以上の設定で追加されるKernelのバージョンはここで使った`python`に当然依存する．
 追加する前に，
