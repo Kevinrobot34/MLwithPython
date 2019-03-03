@@ -21,9 +21,16 @@ Pythonで一通り機械学習などを出来るようになるためのnotebook
 * 環境構築
     - [pythonの準備](markdown/DevEnv.md)
         - [pyenvによるpythonのインストール](markdown/pyenv.md)
+        - [pyenv-virtualenvによる仮想環境の整備](markdown/pyenv-virtualenv.md)
     - [Jupyter Notebookの設定](markdown/JupyterNotebook.md)
 * [pythonの文法overview](notebook/PythonGrammar.ipynb)
 * [pandasによるデータ処理](notebook/pandas.ipynb) (under construction)
 * matplotlibによる可視化 (under construction)
 * [scikit-learnによる機械学習](notebook/sklearn.ipynb) (under construction)
 * [chainerによる深層学習](notebook/chainer_MNIST.ipynb)
+
+
+## 追加予定な内容
+* pythonの文法overview
+    * file読み書き，クラスの定義・継承など，リスト内包表記
+    * 自作モジュールのimport
